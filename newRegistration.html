@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Registration Form</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Blood Bank Registration Form</h1>
+        <form action="demo.jsp">
+            <div class="row">
+                <!-- Column 1 -->
+                <div class="col-md-3">
+                    <div class="form-section">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Blood Bank Name:</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="registration_number" class="form-label">Registration Number:</label>
+                            <input type="text" class="form-control" id="registration_number" name="registration_number" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address:</label>
+                            <textarea class="form-control" id="address" name="address" rows="4" required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="col-md-3">
+                    <div class="form-section">
+                        <div class="mb-3">
+                            <label for="contact_person" class="form-label">Contact Person:</label>
+                            <input type="text" class="form-control" id="contact_person" name="contact_person" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contact_number" class="form-label">Contact Number:</label>
+                            <input type="tel" class="form-control" id="contact_number" name="contact_number" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="col-md-3">
+                    <div class="form-section">
+                        <div class="mb-3">
+                            <label for="establishment_year" class="form-label">Year of Establishment:</label>
+                            <input type="number" class="form-control" id="establishment_year" name="establishment_year" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="capacity" class="form-label">Blood Storage Capacity (liters):</label>
+                            <input type="number" class="form-control" id="capacity" name="capacity" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="license_number" class="form-label">License Number:</label>
+                            <input type="text" class="form-control" id="license_number" name="license_number" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="col-md-3">
+                    <div class="form-section">
+                        <div class="mb-3">
+                            <label for="expiry_date" class="form-label">License Expiry Date:</label>
+                            <input type="date" class="form-control" id="expiry_date" name="expiry_date" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Is Registered with Government?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="is_registered" id="registered_yes" value="yes" required>
+                                <label class="form-check-label" for="registered_yes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="is_registered" id="registered_no" value="no" required>
+                                <label class="form-check-label" for="registered_no">No</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Services Provided:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="service_blood_collection" name="services[]" value="Blood Collection">
+                                <label class="form-check-label" for="service_blood_collection">Blood Collection</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="service_blood_storage" name="services[]" value="Blood Storage">
+                                <label class="form-check-label" for="service_blood_storage">Blood Storage</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="service_blood_distribution" name="services[]" value="Blood Distribution">
+                                <label class="form-check-label" for="service_blood_distribution">Blood Distribution</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="form-section">
+                <div class="mb-3">
+                    <label for="additional_info" class="form-label">Additional Information:</label>
+                    <textarea class="form-control" id="additional_info" name="additional_info" rows="4"></textarea>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-section">
+                <center><input type="submit" class="btn btn-primary" value="Submit"></center>
+            </div>
+        </form>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<style>
+	/* Web Design CSS for Blood Bank Registration Form */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #cc0000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+	
+    background-color: #cc0000;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #aa0000;
+}
+
+/* Radio and Checkbox styling */
+.form-check-input[type="radio"],
+.form-check-input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+/* Additional styles for form elements */
+textarea {
+    resize: vertical;
+}
+
+/* Style form header and description */
+.form-header {
+    background-color: #cc0000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.form-description {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+/* Style form sections */
+.form-section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Style form errors or messages */
+.error-message {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+/* Optional: Add custom styles for smaller screens */
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+    .form-control {
+        font-size: 14px;
+    }
+    .btn-primary {
+        font-size: 16px;
+    }
+}
+
+</style>
